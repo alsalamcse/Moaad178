@@ -56,9 +56,11 @@ public class calc extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view)
     {
-        String stnum1=et
+        String stnum1=et.getText().toString();
+        double num=Double.parseDouble(stnum1);
 
-
+        if (view==btn)
+            (
     }
 }
 
