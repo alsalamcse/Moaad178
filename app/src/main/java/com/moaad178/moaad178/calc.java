@@ -24,24 +24,22 @@ public class calc extends AppCompatActivity implements View.OnClickListener {
     private EditText et2;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
-        btn=(Button)findViewById(R.id.btn);
-        btn2=(Button)findViewById(R.id.btn2);
-        btn3=(Button)findViewById(R.id.btn3);
-        btn4=(Button)findViewById(R.id.btn4);
-        btn5=(Button)findViewById(R.id.btn5);
-        btn6=(Button)findViewById(R.id.btn6);
-        btn7=(Button)findViewById(R.id.btn7);
-        TV=(TextView)findViewById(R.id.tv);
-        TV2=(TextView)findViewById(R.id.tv2);
-        et=(EditText) findViewById(R.id.et);
-        et2=(EditText) findViewById(R.id.et2);
-        et3=(EditText) findViewById(R.id.et3);
+        btn = (Button) findViewById(R.id.btn);
+        btn2 = (Button) findViewById(R.id.btn2);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
+        btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
+        btn7 = (Button) findViewById(R.id.btn7);
+        TV = (TextView) findViewById(R.id.tv);
+        TV2 = (TextView) findViewById(R.id.tv2);
+        et = (EditText) findViewById(R.id.et);
+        et2 = (EditText) findViewById(R.id.et2);
+        et3 = (EditText) findViewById(R.id.et3);
         btn.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
@@ -54,15 +52,59 @@ public class calc extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override
-    public void onClick(View view)
-    {
-        String stnum1=et.getText().toString();
-        double num=Double.parseDouble(stnum1);
+    public void onClick(View view) {
+        String stnum1 = et.getText().toString();
+        String stnum2 = et2.getText().toString();
+        String stnum3 = et3.getText().toString();
+        double num = Double.parseDouble(stnum1);
+        double num2 = Double.parseDouble(stnum2);
+        double num3 = Double.parseDouble(stnum3);
 
-        if (view==btn)
-            (
+        if (view == btn)
+        {
+            TV.setText("+");
+        }
+
+
+        if (view == btn2)
+        {
+            TV.setText("-");
+        }
+
+
+        if (view == btn3)
+        {
+            TV.setText("*");
+        }
+        if (view == btn4)
+        {
+            TV.setText("/");
+        }
+        if (view == btn5)
+        {
+            TV.setText("^");
+
+        }
+        if (view == btn6)
+        {
+            String Tv=Tv.getText().tostring();
+            double res=0
+
     }
+        if (view == btn7)
+    {
+        et.setText("");
+        et2.setText("");
+        et3.setText("");
+        TV.setText("?");
+
+
+    }
+
+
 }
+}
+
 
 
 
